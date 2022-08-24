@@ -30,6 +30,7 @@ export class UserComponent implements OnInit {
     this.refreshTable()
   }
 
+  //Add user to table
   onSubmit(): void {
     // Process checkout data from form
     console.warn('Your user has been submitted', this.userForm.value);
@@ -40,6 +41,7 @@ export class UserComponent implements OnInit {
     this.userForm.reset();
   }
 
+  //Refresh user table
   refreshTable(){
     console.log("Refreshing table")
     this.userService.getUsers().subscribe(response=>{
