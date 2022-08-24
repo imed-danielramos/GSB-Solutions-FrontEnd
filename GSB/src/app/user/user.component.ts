@@ -34,8 +34,9 @@ export class UserComponent implements OnInit {
     // Process checkout data from form
     console.warn('Your user has been submitted', this.userForm.value);
     this.userService.addUser(this.userForm.value).subscribe(response=>{
+      this.refreshTable();
     });
-    this.refreshTable();
+    
     this.userForm.reset();
   }
 

@@ -3,13 +3,12 @@
         <div class="container">
             <h1>Register new user</h1>
 
-            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-                <input type="text" placeholder="Name" formControlName="name"><br>
-                <input type="text" placeholder="Surname" formControlName="surname"><br>
-                <input type="email" placeholder="Email" formControlName="email">
-                <input type="password" placeholder="Password" formControlName="address"><br>
+            <form ngNativeValidate  [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                <input type="text" placeholder="Name" formControlName="name" required><br>
+                <input type="text" placeholder="Surname" formControlName="surname" required><br>
+                <input type="email" placeholder="Email" formControlName="email" required>
+                <input type="text" placeholder="Address" formControlName="address" required><br>
                 <button class="button" type="submit">Register</button>
-
             </form>
         </div>
     </div>
@@ -18,7 +17,7 @@
     <div class="registered">
         <div class="container">
             <i class="fas fa-user-plus fa-5x"></i>
-            <h1>Registered users</h1>
+            <h1 style="color: white;">Registered users</h1>
             <table class="rwd-table">
                 <tr>
                     <th>Name</th>
